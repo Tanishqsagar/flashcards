@@ -30,7 +30,11 @@ const Flashcard=({question,answer})=>{
         </div>
 
         {/* Back Side (Text stays readable) */}
-        <div className="absolute w-full h-full flex items-center justify-center bg-gray-800 text-white text-xl font-semibold rounded-lg backface-hidden rotate-y-180">
+        <div className="absolute w-full h-full flex items-center justify-center bg-gray-800 text-white text-xl font-semibold rounded-lg backface-hidden rotate-y-180"
+        style={{
+            transform: "rotateY(180deg)",
+            backfaceVisibility: "hidden",
+          }}>
           {answer}
         </div>
       </div>
