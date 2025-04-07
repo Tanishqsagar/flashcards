@@ -19,6 +19,8 @@ dotenv.config({ path: path.resolve(__dirname, ".env") });
 const app=express();
 const PORT=process.env.PORT || 5000;
 
+app.use(cors())
+
 const MONGO_URI = process.env.MONGO_URI;
 
 console.log("MONGO_URI:", process.env.MONGO_URI);
@@ -27,7 +29,6 @@ if (!MONGO_URI) {
     process.exit(1); // Stop the server if URI is missing
   }
 
-app.use(cors())
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
