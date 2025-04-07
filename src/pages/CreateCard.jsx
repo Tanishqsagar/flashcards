@@ -9,7 +9,7 @@ const CreateCard=()=>{
         // console.log(question);
     }
 
-    const API_BASE_URL="http://localhost:5000/flashcards"
+    const API_BASE_URL="https://flashcards-93eh.onrender.com"
 
     const handleSubmit=(e)=>{
         e.preventDefault();
@@ -21,7 +21,7 @@ const CreateCard=()=>{
         const answer= formData.get("answer")
         
         axios
-        .post(API_BASE_URL,{
+        .post(`${API_BASE_URL}/flashcards`,{
             category,
             question,
             answer

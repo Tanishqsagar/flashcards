@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, Tabs, Tab} from "@mui/material";
 
+const API_BASE="https://flashcards-93eh.onrender.com"
+
 const Dashboard=()=>{
     const [user,setUser]=useState(null);
     const [loading,setLoading]=useState(true)
@@ -8,7 +10,7 @@ const Dashboard=()=>{
         const fetchUser= async ()=>{
             const token = localStorage.getItem("token");
             try{
-                const res=await fetch("http://localhost:5000/user",{
+                const res=await fetch(`${API_BASE}/user`,{
                     method: "GET",
                     headers: {
                         "Content-Type":"application/json",
