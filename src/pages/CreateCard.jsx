@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const CreateCard=()=>{
+    const navigate=useNavigate();
 
     const search=(formData)=> {
         console.log(formData);
@@ -21,7 +22,6 @@ const CreateCard=()=>{
         const question= formData.get("question")
         const answer= formData.get("answer")
 
-        const navigate=useNavigate();
         
         axios
         .post(`${API_BASE_URL}/flashcards`,{
