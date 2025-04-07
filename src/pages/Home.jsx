@@ -6,10 +6,10 @@ const Home=()=>{
         <div className="flex justify-center align-middle -mt-10">
             <div className="flex flex-col gap-4 h-screen align-middle justify-center">
                 <div>
-                    <h1 className="text-4xl text-center font-bold">Learn Faster, Remember Longer!</h1>
+                    <h1 className="text-4xl text-center font-bold">Master Any Subject with Smart Flashcards</h1>
                 </div>
                 <div>
-                    <p className="text-m text-center align-middle">Master any language with interactive <br/> flashcards & spaced repetition.</p>
+                    <p className="text-m text-center align-middle">Learn faster and remember longer with our scientifically-proven spaced repetition system. Create, study, and share flashcards on any device.<br/></p>
                 </div>
                 <div className="flex gap-4 align-middle justify-center">
                     <Link to={"/learn"}>

@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+/*
 .perspective-1000 {
   perspective: 1000px;
 }
@@ -29,14 +29,14 @@
  
 a {
   font-weight: 500;
-  color: white;
+  color: white; 
   text-decoration: inherit;
 }
 a:hover {
   color: grey;
   transition-duration: 10ms;
 }
-/*
+
 body {
   margin: 0;
   display: flex;
