@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 const Flashcard=({question,answer})=>{
-    const [flipped,setFlipped]=useState(0)
+    const [flipped,setFlipped]=useState(false)
     const handleClick=()=>{
         setFlip(true)
     }
@@ -35,4 +35,4 @@ const Flashcard=({question,answer})=>{
     )
 }
 
-export default Flashcard
+export default Flashcard;
