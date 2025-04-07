@@ -22,7 +22,10 @@ const Flashcard=({question,answer})=>{
         }`}
       >
         {/* Front Side */}
-        <div className="absolute w-full h-full flex items-center justify-center bg-blue-500 text-white text-xl font-semibold rounded-lg backface-hidden">
+        <div className="absolute w-full h-full flex items-center justify-center bg-blue-500 text-white text-xl font-semibold rounded-lg backface-hidden"
+        style={{
+            backfaceVisibility: "hidden",
+          }}>
           {question}
         </div>
 
