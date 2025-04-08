@@ -2,7 +2,9 @@ import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+
 const CreateCard=()=>{
+
     const navigate=useNavigate();
 
     const search=(formData)=> {
@@ -11,7 +13,8 @@ const CreateCard=()=>{
         // console.log(question);
     }
 
-    const API_BASE_URL="https://flashcards-93eh.onrender.com"
+    const API_BASE_URL=`${import.meta.env.BACKEND_URL}`
+
 
     const handleSubmit=(e)=>{
         e.preventDefault();

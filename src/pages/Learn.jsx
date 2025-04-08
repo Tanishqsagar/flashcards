@@ -12,11 +12,11 @@ const Learn=()=>{
         getFlashcards();
     },[]);
 
-    const API_BASE="https://flashcards-93eh.onrender.com"
+    const API_BASE_URL=`${process.env.BACKEND_URL}`
 
     const getFlashcards= async ()=>{
         try{
-            const response= await axios.get(`${API_BASE}/flashcards`)
+            const response= await axios.get(`${API_BASE_URL}/flashcards`)
             console.log(response.data);
             setFlashCards(response.data);
         }catch(error){

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API_BASE="https://flashcards-93eh.onrender.com";
+const API_BASE_URL=`${import.meta.env.BACKEND_URL}`
 
 
 const Login=()=>{
@@ -19,7 +19,7 @@ const Login=()=>{
 
         console.log(FormData);
 
-        const res= await fetch(`${API_BASE}/login`,{
+        const res= await fetch(`${API_BASE_URL}/login`,{
             method:"POST",
             headers:{"content-type":"application/json"},
             body:JSON.stringify(FormData)

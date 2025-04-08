@@ -1,7 +1,7 @@
     import React, { useState } from "react";
     import { useNavigate } from "react-router-dom";
 
-    const API_BASE="https://flashcards-93eh.onrender.com";
+    const API_BASE_URL=`${import.meta.env.BACKEND_URL}`
 
     const Signup=()=>{
         const [formData,setFormData]=useState({username:"", email:"", password:""});
@@ -17,7 +17,7 @@
             setError("");
             console.log(formData);
             
-            const res=await fetch(`${API_BASE}/signup`,{
+            const res=await fetch(`${API_BASE_URL}/signup`,{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(formData)
