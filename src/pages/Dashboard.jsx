@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, Tabs, Tab} from "@mui/material";
 
-const API_BASE_URL=`${import.meta.env.BACKEND_URL}`
+const API_BASE_URL=import.meta.env.VITE_BACKEND_URL
 
 
 const Dashboard=()=>{
