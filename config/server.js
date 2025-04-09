@@ -20,7 +20,7 @@ const app=express();
 const PORT=process.env.PORT || 5000;
 
 app.use(cors({
-    origin: 'https://ankideck-rho.vercel.app',
+    origin: ["http://localhost:5173",'https://ankideck-rho.vercel.app'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }))
